@@ -1,29 +1,13 @@
-#mar-header h1.logo {
-    padding-top: 10px;
-    display: inline-block;
-    width: 140px;
-    height: 32px;
-    background: url('http://demos.telerik.com/kendo-ui/content/spa/websushi/css/images/logo.png') 0 0 no-repeat;
+#header 
+{
+    padding-top: 60px;
 }
 
-#mar-header h1 a {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-}
-
-#mar-header {
-    padding-bottom: 40px;
-    border-bottom: 1px solid #535353;
-    margin-left: 9%;
-    margin-right: 6%;
-}
-
-#mar-header #logo-pic {
+#header #logo-pic {
     float: left;
 }
 
-#mar-header #cart-info {
+#header #cart-info {
     float: right;
     height: 28px;
     line-height: 28px;
@@ -36,7 +20,7 @@
     letter-spacing: 1px;
 }
 
-#mar-header #cart-info>span {
+#header #cart-info>span {
     display: inline-block;
     background: rgb(214, 0, 65);
     background: -moz-linear-gradient(top, rgba(214, 0, 65, 1) 0%, rgba(169, 0, 64, 1) 100%);
@@ -50,7 +34,7 @@
     padding: 0 26px 0 28px;
 }
 
-#mar-header #cart-info>span:hover {
+#header #cart-info>span:hover {
     background: rgb(214, 0, 65);
     background: -moz-linear-gradient(top, rgba(169, 0, 64, 1) 0%, rgba(214, 0, 65, 1) 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(169, 0, 64, 1)), color-stop(100%, rgba(214, 0, 65, 1)));
@@ -61,16 +45,16 @@
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#d60041', endColorstr='#a90040', GradientType=0);
 }
 
-#mar-header #cart-info span {
+#header #cart-info span {
     color: #fff;
 }
 
-#mar-header #cart-info span span {
+#header #cart-info span span {
     line-height: 26px;
     font-size: 14px;
 }
 
-#mar-header #cart-info span:before {
+#header #cart-info span:before {
     content: "";
     display: block;
     width: 0;
@@ -84,7 +68,7 @@
     border-left: 14px solid #000;
 }
 
-#mar-header #cart-info span:after {
+#header #cart-info span:after {
     content: "";
     display: block;
     width: 8px;
@@ -92,6 +76,12 @@
     position: absolute;
     right: 10px;
     top: 12px;
+}
+
+#header-line div
+{
+    padding-bottom: 40px;
+    border-bottom: 1px solid #535353;
 }
 
 /*footer section*/
