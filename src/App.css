@@ -1,10 +1,22 @@
-.ha-ubication {
-    position: relative;
-    margin-top: 4%;
-    margin-left: 6%;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.ha-products {
+body {
+    height: 100%;
+    background: #0c0c0c url('http://demos.telerik.com/kendo-ui/content/spa/websushi/css/images/background-image.png') repeat left top;
+}
+
+/* FirstView */
+.ubication {
+    position: relative;
+    margin-top: 4%;
+    margin-left: 8%;
+}
+
+.products {
     position: relative;
     width: 200px;
     margin-bottom: 20px;
@@ -13,7 +25,7 @@
     text-align: center;
 }
 
-.ha-price {
+.price {
     font-size: 17px;
     color: #463f3f;
     width: 100%;
@@ -22,7 +34,7 @@
     line-height: 1em;
 }
 
-.ha-btn {
+.btn-add {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -38,13 +50,13 @@
     border-right: 1px dotted #a6a6a6;
 }
 
-.ha-btn:hover {
+.btn-add:hover {
     background-color: #d60041;
     color: #fff;
     cursor: pointer;
 }
 
-.ha-products strong {
+.products strong {
     display: inline-block;
     color: #ab7829;
     font-size: 21px;
@@ -57,20 +69,20 @@
     overflow: hidden;
 }
 
-.ha-img {
+.product-img {
     position: relative;
-    right: 8%;
+    right: 9%;
 }
 
-.ha-products:hover .ha-arrow {
+.products:hover .arrow {
     visibility: visible;
 }
 
-.ha-products:hover .img-arrow {
+.products:hover .img-arrow {
     visibility: visible;
 }
 
-.ha-arrow {
+.arrow {
     position: absolute;
     visibility: hidden;
     top: 0;
@@ -90,9 +102,9 @@
     width: 20%;
     height: 20%;
 }
-
-.so-cart,
-.so-cart-total {
+ /* Cart */
+.cart,
+.cart-total {
     background: #000;
     padding: 0;
     color: white;
@@ -101,16 +113,16 @@
     overflow: hidden;
 }
 
-.so-cart {
+.cart {
     border-right: 0;
 }
 
-.so-cart-total {
+.cart-total {
     border-left: 0;
     background: #333;
 }
 
-.so-cart-product {
+.cart-product {
     position: relative;
     display: inline-block;
     width: 97px;
@@ -120,16 +132,17 @@
     font-size: 12px;
 }
 
-.so-cart-product img {
+.cart-product img {
     width: 100%;
     object-fit: fill;
 }
 
-.so-cart-product span {
+.cart-product span {
     color: white;
 }
 
-.so-btn-checkout {
+.btn-checkout {
+    color: #fff;
     border: 0;
     font-size: 10px;
     background: #CA0041;
@@ -148,25 +161,39 @@
     right: 0;
 }
 
-.so-btn-empty {
+.btn-checkout:hover {
+    color: #fff;
+    background: rgb(214, 0, 65);
+    background: -moz-linear-gradient(top, rgba(169, 0, 64, 1) 0%, rgba(214, 0, 65, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(169, 0, 64, 1)), color-stop(100%, rgba(214, 0, 65, 1)));
+    background: -webkit-linear-gradient(top, rgba(169, 0, 64, 1) 0%, rgba(214, 0, 65, 1) 100%);
+    background: -o-linear-gradient(top, rgba(169, 0, 64, 1) 0%, rgba(214, 0, 65, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(169, 0, 64, 1) 0%, rgba(214, 0, 65, 1) 100%);
+    background: linear-gradient(to bottom, rgba(169, 0, 64, 1) 0%, rgba(214, 0, 65, 1) 100%);
+    text-decoration-line: none;
+}
+.btn-empty {
     font-weight: 600;
     color: rgb(253, 59, 124);
     font-size: 10px;
     position: absolute;
     margin: 8px 10px;
-    ;
     bottom: 0;
 }
 
-.so-less-padding {
+.btn-empty:hover {
+    color: rgb(253, 59, 124);
+}
+
+.less-padding {
     margin: 10px;
 }
 
-.so-cart-product:hover .so-delete {
+.cart-product:hover .delete {
     visibility: visible;
 }
 
-.so-delete {
+.delete {
     color: white;
     padding-top: 35%;
     display: flex;
@@ -183,20 +210,9 @@
     cursor: hand;
 }
 
-.so-margin {
+.margin {
     margin-top: 20px;
     margin-bottom: 20px;
-}
-
-body {
-    height: 100%;
-    background: #0c0c0c url('http://demos.telerik.com/kendo-ui/content/spa/websushi/css/images/background-image.png') repeat left top;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
 }
 
 .k-whiteFont .table>tbody>tr>td,
