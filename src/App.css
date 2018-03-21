@@ -102,6 +102,7 @@ body {
     width: 20%;
     height: 20%;
 }
+
  /* Cart */
 .cart,
 .cart-total {
@@ -215,7 +216,8 @@ body {
     margin-bottom: 20px;
 }
 
-.k-whiteFont .table>tbody>tr>td,
+/* Menu */
+.whiteFont .table>tbody>tr>td,
 .table>thead>tr>th {
     padding: 0px;
     line-height: 1.42857143;
@@ -224,39 +226,39 @@ body {
     padding-bottom: 4px;
 }
 
-.k-whiteFont .table>thead>tr>th {
+.whiteFont .table>thead>tr>th {
     border-bottom: 0px solid #ddd;
     text-align: center;
 }
 
-body .k-whiteFont {
+.whiteFont {
     background: white;
 }
 
 @media screen and (max-width: 1400px) and (min-width: 768px) {
-    .k-space {
+    .space {
         padding: 0;
     }
-    .k-buttonsBottom {
+    .buttonsBottom {
         display: none;
     }
 }
 
 @media screen and (max-width: 767px) and (min-width: 0px) {
-    .k-imgDetails {
+    .imgDetails {
         width: 300px;
     }
-    .k-next,
-    .k-back,
+    .next,
+    .back,
     #details-top-image,
     #details-bottom-image {
         display: none;
     }
-    .k-buttonsBottom {
+    .buttonsBottom {
         display: block;
     }
-    .k-nextd,
-    .k-backd {
+    .nextd,
+    .backd {
         background: #ba0040 !important;
         position: absolute;
         z-index: 1000;
@@ -264,32 +266,33 @@ body .k-whiteFont {
     }
 }
 
-.k-cd {
+.cd {
     padding: 0;
 }
 
-.k-btn {
+.btn-next {
     padding: 0px !important;
     margin: 78px 18px;
 }
 
-.k-btns {
+.btns-next {
     padding: 0px !important;
     margin: 123px 18px;
 }
 
-.k-imgDetails {
+.imgDetails {
     margin: 0 auto;
+    /* width: 100%; */
 }
 
-.k-back,
-.k-next {
+.back,
+.next {
     background: black;
     height: 200px;
 }
 
-.k-back:hover,
-.k-next:hover {
+.back:hover,
+.next:hover {
     background: #ba0040;
 }
 
@@ -319,7 +322,6 @@ body .k-whiteFont {
     background: -o-linear-gradient(top, rgba(214, 0, 65, 1) 0%, rgba(169, 0, 64, 1) 100%);
     background: -ms-linear-gradient(top, rgba(214, 0, 65, 1) 0%, rgba(169, 0, 64, 1) 100%);
     background: linear-gradient(to bottom, rgba(214, 0, 65, 1) 0%, rgba(169, 0, 64, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#d60041', endColorstr='#a90040', GradientType=0);
 }
 
 .buy span {
@@ -344,7 +346,6 @@ body .k-whiteFont {
     background: -o-linear-gradient(top, rgba(169, 0, 64, 1) 0%, rgba(214, 0, 65, 1) 100%);
     background: -ms-linear-gradient(top, rgba(169, 0, 64, 1) 0%, rgba(214, 0, 65, 1) 100%);
     background: linear-gradient(to bottom, rgba(169, 0, 64, 1) 0%, rgba(214, 0, 65, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#d60041', endColorstr='#a90040', GradientType=0);
     cursor: pointer;
 }
 
@@ -358,17 +359,17 @@ body .k-whiteFont {
     border-radius: 9px;
 }
 
-.k-priceButton {
+.priceButton {
     border-top: dotted;
     padding: 10px;
     margin-bottom: 35px;
 }
 
-.k-detailDes {
+.detailDes {
     padding: 9px;
 }
 
-.k-table {
+.nutrition-table {
     width: 93%;
     max-width: 100%;
     margin-bottom: 0px;

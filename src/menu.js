@@ -8,49 +8,49 @@ const Menu = ({food, selectedFood, cart}) =>
 {
     console.log("select", selectedFood);
     return (
-        <div>
+        <div className="">
             <Header cart={cart}/>
             {
                 cart.length>0?
                 <Cart cart={cart}/>:
                 <div></div>
             }
-        <div id="ke-menu" className=" container k-whiteFont"> 
-            <div className="row" id="details-top-image"></div>
-            <div className="row">
-                <div>
-                    <div className="col-md-1 col-xs-1 col-sm-1 k-back">
-                        <a className='btn k-btn' onClick={() => nextFood(-1) }><img src="./img/nav-prev.png"/></a>
-                    </div>
-                    <div className="col-sm-2 col-md-2 col-xs-12 k-space">
-                        <div className="k-buttonsBottom col-md-1 col-xs-1 col-sm-1">
-                            <div className=" k-backd">
-                                <a className='btn k-btns' onClick={() => nextFood(-1) }><img src="./img/nav-prev.png"/></a>
+            <div id="menu" className="container whiteFont"> 
+                <div className="row" id="details-top-image"></div>
+                <div className="row">
+                    <div>
+                        <div className="col-lg-1 col-md-1 col-xs-1 col-sm-1 back">
+                            <a className='btn btn-next' onClick={() => nextFood(-1) }><img src="./img/nav-prev.png"/></a>
+                        </div>
+                        <div className="col-lg-2 col-md-3 col-sm-3 col-xs-12 space">
+                            <div className="buttonsBottom col-xs-1">
+                                <div className=" backd">
+                                    <a className='btn btns-next' onClick={() => nextFood(-1) }><img src="./img/nav-prev.png"/></a>
+                                </div>
+                            </div>
+                            <div className="col-lg-12 col-md-12 col-sm-12 col-xs-5 cd">
+                                <img className="imgDetails" src={food[selectedFood].img}/>
+                            </div>
+                            <div className="buttonsBottom col-xs-1">
+                                <div className=" nextd">
+                                    <a className='btn btns-next' onClick={() => nextFood(1) }><img src="./img/nav-next.png"/></a>
+                                </div>
                             </div>
                         </div>
-                        <div className="col-xs-8 k-cd">
-                            <img className="k-imgDetails" src={food[selectedFood].img}/>
+                        <div className="col-lg-5 col-md-4 col-sm-4 col-xs-12">
+                            <Description selectedFood={selectedFood}/>
                         </div>
-                        <div className="k-buttonsBottom col-md-1 col-xs-1 col-sm-1">
-                            <div className=" k-nextd">
-                                <a className='btn k-btns' onClick={() => nextFood(1) }><img src="./img/nav-next.png"/></a>
-                            </div>
+                        <div className="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <Nutrition selectedFood={selectedFood}/>
                         </div>
-                    </div>
-                    <div className="col-sm-5 col-md-5 col-xs-12">
-                        <Description selectedFood={selectedFood}/>
-                    </div>
-                    <div className="col-sm-3 col-md-3 col-xs-12">
-                        <Nutrition selectedFood={selectedFood}/>
-                    </div>
-                    <div className="col-md-1 col-xs-1 col-sm-1 k-next">
-                        <a className='btn k-btn' onClick={() => nextFood(1) }><img src="./img/nav-next.png"/></a>
+                        <div className="col-lg-1 col-md-1 col-sm-1 col-xs-1 next">
+                            <a className='btn btn-next' onClick={() => nextFood(1) }><img src="./img/nav-next.png"/></a>
+                        </div>
                     </div>
                 </div>
+                <div className="row" id="details-bottom-image"></div>
             </div>
-            <div className="row" id="details-bottom-image"></div>
-        </div>
-        <Footer />
+            <Footer />
         </div>
     )
 }
@@ -59,12 +59,12 @@ const Description =({selectedFood}) =>
 {
     return (
         <div>
-            <div className="k-detailDes">
+            <div className="detailDes">
                 <h3>{getInfoProduct(selectedFood).name}</h3>
                 <label>{getInfoProduct(selectedFood).description}</label>
             </div>
             <br />
-            <div className="k-priceButton">
+            <div className="priceButton">
                 <div className="col-xs-6 col-md-6 col-sm-6">${getInfoProduct(selectedFood).price}</div>
                 <button className="buy col-xs-6 col-md-6 col-sm-6" onClick={() => addCart(selectedFood)}>Add to Cart</button>
             </div>
@@ -75,7 +75,7 @@ const Nutrition = ({selectedFood}) =>
 {
     return (
         <div className="row">
-            <table className="table table-responsive k-table">
+            <table className="table table-responsive nutrition-table">
                 <thead>
                     <tr>
                         <th colSpan="2">Nutritional Information</th>
