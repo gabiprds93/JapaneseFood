@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import {connect} from "redux-zero/react";
-import {calculatePrice, setQuantity, addPrices} from "./actions";
+import {calculatePrice, setQuantity, addPrices, emptyCart} from "./actions";
 import './checkout.css';
 
 const Checkout = ({food, cart}) => 
@@ -42,8 +42,8 @@ const Checkout = ({food, cart}) =>
             <p id="total-checkout" className="text-rigth">
             <button className="btn btn-link" >Total:</button>
             <span className="">${addPrices().toFixed(2)}</span></p>
-            <a className="cancel-order" href="#">cancel order</a>
-            <button className="order-now" href="#">order now!</button>    
+            <a className="cancel-order" href="#" onClick={emptyCart}>cancel order</a>
+            <a className="order-now" href="#" onClick={emptyCart}>order now!</a>    
           </div>
         </div>
       </div>
